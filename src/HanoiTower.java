@@ -37,7 +37,13 @@ public class HanoiTower {
     }
 
     public boolean move (int startingRodIndex, int endingRodIndex) {
-        return false;
+        // remove the disc from the set
+        Integer discToMove = rodMap.get(startingRodIndex).removeTop();
+        System.out.println(discToMove);
+
+        rodMap.get(endingRodIndex).add(discToMove);
+
+        return true;
     }
 
     public boolean solved () {
@@ -45,7 +51,7 @@ public class HanoiTower {
             if (i == 1) {
                 continue;
             }
-            if (rodMap.get(i).size() == numDisks) {
+            if (rodMap.get(i).discs.size() == numDisks) {
                 return true;
             }
         }

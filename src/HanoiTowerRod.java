@@ -18,17 +18,17 @@ public class HanoiTowerRod extends HashSet<Integer> {
     public Integer removeTop () {
         Integer smallest = findSmallestValue();
 
-        if (this.size() == 0) {
+        if (discs.size() == 0) {
             return null;
         }
-        super.remove(findSmallestValue());
+        discs.remove(smallest);
         return smallest;
     }
 
     public Integer findSmallestValue () {
         Integer response = Integer.MAX_VALUE;
 
-        for (Integer i : this) {
+        for (Integer i : discs) {
             if (i < response) {
                 response = i;
             }
