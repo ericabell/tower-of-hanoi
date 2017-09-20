@@ -37,7 +37,14 @@ public class HanoiTowerRod extends HashSet<Integer> {
     }
 
     public Integer findLargestValue () {
-        return null;
+        Integer response = 0;
+
+        for (Integer i : this) {
+            if( i > response) {
+                response = i;
+            }
+        }
+        return response;
     }
 
     @Override
