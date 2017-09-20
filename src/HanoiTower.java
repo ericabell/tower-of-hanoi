@@ -7,8 +7,9 @@ public class HanoiTower {
     Map<Integer, HanoiTowerRod> rodMap;
 
     int numDisks;
+    int numRods;
 
-    public HanoiTower (int numDisks) {
+    public HanoiTower (int numDisks, int numRods) {
         this.numDisks = numDisks;
         this.numRods = numRods;
 
