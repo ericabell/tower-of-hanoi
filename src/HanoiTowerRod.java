@@ -3,13 +3,16 @@ import java.util.HashSet;
 
 public class HanoiTowerRod extends HashSet<Integer> {
 
+    public HashSet<Integer> discs = new HashSet<Integer>();
+
     public HanoiTowerRod () {
         super();
     }
 
     @Override
     public boolean add (Integer e) {
-        return false;
+        discs.add(e);
+        return true;
     }
 
     public Integer removeTop () {
@@ -35,5 +38,12 @@ public class HanoiTowerRod extends HashSet<Integer> {
 
     public Integer findLargestValue () {
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return "HanoiTowerRod{" +
+                "discs=" + discs +
+                '}';
     }
 }
